@@ -1,0 +1,34 @@
+<div>
+	<h1>Search catalog</h1>
+	<div class="input-group">
+	  <span class="input-group-btn">
+	    <button class="btn btn-default glyphicon glyphicon-search input-group-btn" type="button"></button>
+	  </span>
+	  <debounce-filter delay="500" placeholder="Search..." (value)="searchChanged($event)"></debounce-filter>
+	</div>
+	<ul class='search-results'>
+		<li class="header-row visible-lg">
+			<div class="row">
+				<div class="col-lg-1"></div>
+				<div class="col-lg-6"><strong>Name</strong></div>
+				<div class="col-lg-1"><strong>SKU</strong></div>
+				<div class="col-lg-1"><strong>itemId</strong></div>
+				<div class="col-lg-1"><strong>prodId</strong></div>
+			</div>
+		</li>
+		<li *ngFor="let sku of products; let index=productCount; let isOdd=odd" [class.odd]="isOdd" >
+			<a routerLink="/product/{{sku.sku | escape}}">
+				<div class="row">
+						<div class="col-xs-12 center-block col-lg-1"><img src="{{sku.imageUrl}}"></div>
+					<div class="col-xs-12 col-lg-6 truncate">
+						<span class="hidden-lg">Name:</span>
+						<span>{{sku.name}}</span>
+					</div>
+					<div class="col-xs-12 col-lg-1"><span class="hidden-lg">SKU:</span> {{sku.sku}}</div>
+					<div class="col-xs-12 col-lg-1"><span class="hidden-lg">itemId:</span> {{sku.itemId}}</div>
+					<div class="col-xs-12 col-lg-1"><span class="hidden-lg">prodId:</span> {{sku.prodId}}</div>
+				</div>
+			</a>
+		</li>
+	</ul>
+</div>

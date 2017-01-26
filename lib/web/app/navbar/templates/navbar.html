@@ -1,0 +1,36 @@
+<div *ngIf="auth.authenticated()">
+	<nav class="navbar navbar-fixed-top navbar-default nav-bg">
+		<div class="container-fluid">
+		<div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" [routerLink]="[brand.path]"><img src="{{brand.image}}"></a>
+	    </div>
+			<ul class="nav navbar-nav">
+				<li *ngFor="let menuItem of leftMenuItems" (mouseenter)="activeMove($event)" (mouseleave)="activeReset()">
+					<a [routerLink]="[menuItem.path]" [ngClass]="getMenuItemAnchorClasses(menuItem)">{{menuItem.title}}</a>
+				</li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li *ngFor="let menuItem of rightMenuItems">
+					<a [routerLink]="[menuItem.path]" [ngClass]="getMenuItemAnchorClasses(menuItem)">{{menuItem.title}}</a>
+				</li>
+				<li *ngIf="!auth.authenticated()" (mouseenter)="activeMove($event)" (mouseleave)="activeReset()">
+					<a href="#" (click)="auth.login()">LOGIN</a>
+				</li>
+				<li class="profile-image" *ngIf="auth.authenticated()">
+					<span class="verticle-align-helper"></span>
+					<img class="circle" src="{{auth.user.picture}}" />
+				</li>
+				<li *ngIf="auth.authenticated()" (mouseenter)="activeMove($event)" (mouseleave)="activeReset()">
+					<a href="#" (click)="auth.logout()">LOGOUT</a>
+				</li>
+			</ul>
+		</div>
+		<span class="navbar-active" [style.left]="active_position" [style.width]="active_width" [style.opacity]="active_visible"></span>
+	</nav>
+</div>

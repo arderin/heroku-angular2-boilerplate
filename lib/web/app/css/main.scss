@@ -1,0 +1,217 @@
+@import "variables";
+
+@font-face {
+  font-family: "Actor";
+  src: url("../fonts/Actor-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*add padding for fixed navbar*/
+body{
+	padding: 75px 0px 200px 0px;
+  	font-family: 'Actor', sans-serif;
+}
+
+.navbar-brand{
+	padding: 5px 10px;
+
+	img{
+		height: 100%;
+	}
+}
+
+.verticle-align-helper{
+	height: 100%;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+img.circle{
+	border-radius: 50%;
+}
+
+input.search{
+	width: 100%;
+	border-radius: 4px;
+}
+.search-results{
+	margin: 25px 0px;
+	border: 1px solid $clr-primary;
+	padding: 0;
+
+	.header-row{
+		background-color: $clr-primary;
+		color:$black;
+		border: 1px solid $clr-primary-border;
+	}
+
+	li{
+		list-style: none;
+		padding: 5px;
+		cursor: pointer;
+		transition: $normal-linear;
+    	overflow: hidden;
+
+		img{
+			width: 75%;
+			display: block;
+			margin: 0 auto;
+		}
+	
+		&:not(.header-row){
+			&.fixed-height{
+				min-height: 37.5px;
+			}
+			&:hover{
+				background:#d7f2ff;
+				a{
+					font-size: 120%;
+				}
+			}
+		}
+	}
+	/* Products-list style */
+	a{
+		transition: $normal-linear;
+		color:$clr-dark-highlight;
+		&:hover{
+			color:#337ab7;
+		}
+	}
+}
+
+/* odd list color 
+li.odd{
+	background-color: #d7f2ff;
+}
+*/
+
+button.btn.btn-default.glyphicon{
+    line-height: 20px;
+    margin-top: -2px;
+}
+
+.a0-lock-container{
+	.a0-bg-gradient{
+		display: none;
+	}
+	button.a0-primary.a0-next{
+		background-color: $clr-primary !important;
+	}
+}
+
+.fa-spin{
+	color: $clr-primary;
+}
+
+.inactive-sku{
+	background: repeating-linear-gradient(
+	  45deg,
+	  rgba(0, 0, 0, 0.2),
+	  rgba(0, 0, 0, 0.2) 10px,
+	  rgba(0, 0, 0, 0.3) 10px,
+	  rgba(0, 0, 0, 0.3) 20px
+	);
+}
+
+/* forms */
+input{
+	&.ng-valid {
+		&[required]{
+	  		border-right: 5px solid #42A948; /* green */
+		}
+	}
+
+	&.ng-invalid {
+		border-right: 5px solid #a94442; /* red */
+	}
+}
+
+.form-group{
+	.alert{
+		padding: 10px;
+    	margin: 10px 0px;
+	}
+	[class^='col-'] {
+		margin-bottom: 15px;
+	}
+	textarea {
+		width: 100%;
+	}
+}
+
+body.gu-unselectable {
+	
+	.product-trash-bin{
+		display: block;
+	}
+}
+
+/* override bootstrap styles */
+.btn.btn-default{
+	color: $black;
+	border-color: $black;
+
+	&:hover{
+		background-color: $black;
+		color: $white;
+	}
+}
+
+/* not supported in IE9, will display as regular row */
+.row-eq-height{
+	display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -moz-flex;
+    display: -moz-flexbox;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+/* override simple-notification css */
+.simple-notification-wrapper.top{
+	top: 70px !important;
+}
+
+/* END override simple-notification css */
+
+/* input group styles */
+.btn.input-group-btn{
+	border-color:$clr-primary;
+	color: $clr-dark-highlight;
+
+	&:hover,
+	&:focus,
+	&:active{
+		color:$white;
+		background: $clr-primary;
+	}
+}
+
+/* END input group styles */
+
+/* helper styles */
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.gutter{
+	padding: 10px 0px;
+}
+.gutter-all{
+	padding: 0px 10px;
+}
+.gutter-all{
+	padding: 10px;
+}
+
+/* END helper styles */
+
+/* ANIMATION */
+
+/* END ANIMATION */

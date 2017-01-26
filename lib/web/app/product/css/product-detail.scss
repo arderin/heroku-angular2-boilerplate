@@ -1,0 +1,179 @@
+/* import variables */
+@import "../../css/variables";
+
+h1{
+	font-size: 1.5em;
+}
+
+img{
+	width: 100%;
+}
+
+ul{
+	padding: 0;
+	li{
+		list-style: none;
+	}
+}
+.title-row {
+	color: $clr-primary;
+    border-bottom: 3px #eee solid;
+    font-size: 2.8em;
+    padding-bottom: 5;
+    margin-bottom: 30px;
+}
+.product-container {
+
+	/* images block */
+	.imgs-container{
+		border: 2px solid $clr-primary;
+
+		.primary-image{
+			border-bottom: solid 1px #eee;
+			margin-bottom: 15px;
+		}
+		.thumbnail-img{
+			cursor: pointer;
+			border: 2px solid #000;
+			margin: 5px;
+			width: 19%;
+			display: inline-block;
+		}
+		.add-img{
+			cursor: pointer;
+			border: 3px dotted $clr-primary;
+			color: $clr-primary;
+			font-size: 31px;
+			height: 50px;
+			text-align: center;
+			transition: all .1s ease-in-out;
+			&:hover{
+				background: $clr-extra-highlight;
+				border-width: 5px;
+				font-size: 30px;
+			}
+
+			&:focus, &:active{
+				background:$clr-highlight;
+			}
+		}	
+	}
+
+	.product-details-container{
+
+		ul.product-details{
+			white-space: nowrap;
+			li{
+				color:gray;
+				display:inline-block;
+				margin: 0px 20px;
+				font-size: 1.3em;
+
+				&:first-child{
+					margin:0;
+				}
+			}
+		}
+		h4{
+			color:gray;
+			font-size: 1.2em;
+		}
+		.jsonEditContainer{
+			height: 40%;
+		}
+
+		.pdp-ksps{
+			ul{
+				margin-left: 20px;
+			}
+			li{
+				list-style: disc;
+			}
+		}
+
+		.product-specs{
+			.row{
+				padding: 5px 0px;
+    			border-top: 1px solid #eee;
+			}
+			.row:first-child{
+				border-top: 0px solid transparent;
+			}
+		}
+		.est-ship-date{
+			font-size: 1.3em;
+		}
+	}
+	section{
+		background-color: #ffffff;
+		padding: 20px;
+		border: 1px solid #eeeeee;
+		border-radius: 5px;
+		margin: 10px 0px;
+	}
+
+	#priceing-tiers{
+
+		.tier-container{
+			text-transform: uppercase;
+			cursor: pointer;
+			box-sizing: border-box;
+			
+			.price-tier{
+				text-align: center;
+			    background: #f9f9f9;
+			    padding: 15px 10px;
+			    border-bottom: 3px solid #000;
+			    h3{
+			    	font-size: 50px;
+			    }
+			}
+
+			.tier-title{
+			    font-size: 14px;
+			    margin-right: 8px;
+			}
+
+			.tier-price{
+				font-size: 18px;
+			    color: #D7410B;
+			    font-weight: bold;
+			}
+		}
+	}
+
+
+}
+
+.cross-sell-well {
+	a:focus, a:hover {
+	    text-decoration: none;
+	}
+	.add-item {
+	box-sizing: border-box;
+	cursor: pointer;
+	height: 209px;
+    border: 3px dotted #0096d6;
+    color: #0096d6;
+    font-size: 145px;
+    text-align: center;
+    transition: all .1s ease-in-out;
+    
+	    &:hover{
+			background: $clr-extra-highlight;
+			border-width: 10px;
+			font-size: 160px;
+	    	line-height: 1.22;
+		}
+
+		&:focus, &:active{
+			background:$clr-highlight;
+		}
+	}
+}
+
+.bv-rating{
+	img{
+		max-width: 85px;
+	}
+}

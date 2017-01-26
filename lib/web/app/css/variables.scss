@@ -1,0 +1,16 @@
+/* colors */
+$black: #000;
+$white: #fff;
+
+/* colors */
+$clr-primary: #f8f8f8;
+$clr-highlight: lighten($clr-primary, 40%);
+$clr-extra-highlight: lighten($clr-primary, 55%);  
+$clr-dark-highlight: darken($clr-primary, 20%);
+
+$clr-primary-border: #e7e7e7;
+
+/* Transitions */
+$fast-linear: all .05s linear;
+$normal-ease-in-out: all .3s ease-in-out;
+$normal-linear: all .3s linear;

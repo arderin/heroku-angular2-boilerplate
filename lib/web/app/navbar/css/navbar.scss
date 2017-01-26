@@ -1,0 +1,34 @@
+@import "../../css/variables";
+
+/*add padding for fixed navbar*/
+body{
+	padding-top: 50px;
+}
+
+.navbar{
+	.profile-image{
+		height: 50px;
+		img{
+			display: inline-block;
+			width: 30px;
+			vertical-align: middle;
+		}
+	}
+}
+
+.navbar-nav{
+	li{
+    	transition: font-size .1s ease-in-out;
+    	&:hover{
+    		font-size:103%;
+    	}
+	}
+}
+
+.navbar-active{
+    border: 2px #fff solid;
+    height: 1px;
+    display: inline-block;
+    position: relative;
+    transition: all 0.7s ease;
+}

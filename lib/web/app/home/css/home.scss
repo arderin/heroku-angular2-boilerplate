@@ -1,0 +1,25 @@
+@import "../../css/variables";
+
+/*add padding for fixed navbar*/
+.btn{
+	&.login{
+		font-size: 18px;
+		display: block;
+		margin: 15px auto;
+		min-width: 200px;
+	}
+}
+
+.home-portal{
+	max-width: 75%;
+	margin: 25px auto;
+
+	a{
+		color: $clr-primary;
+		&:hover,
+		&:active{
+			color:$clr-dark-highlight;
+			text-decoration: none;
+		}
+	}
+}

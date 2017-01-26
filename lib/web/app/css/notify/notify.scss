@@ -1,0 +1,71 @@
+/* import variables */
+@import "../variables";
+
+#notify-container {
+	z-index: 2000;
+
+	.notif{
+		position: fixed;
+		font-size: 16px;
+		padding: 15px;
+	    border: 1px solid transparent;
+	    border-radius: 2px;
+	    cursor: pointer;
+	    transition: $fast-linear;
+	    z-index: 2010;
+	    &:hover{
+	    	box-shadow: 0 0 5px rgba(51, 51, 51, 0.5);
+	    }
+
+		/* NOTIFY SIZE & POSITION */
+		&.lg{
+			width: 50%;
+			&.center{
+				left: 25%;
+			}
+		}		
+		&.md{
+			width: 30%;
+			&.center{
+				left: 35%;
+			}
+		}
+		&.sm{
+			width: 20%;
+			&.center{
+				left: 40%;
+			}
+		}
+		
+		&.left{
+			left: 25px;
+		}
+		&.right{
+			right: 25px;
+		}
+	
+		/* NOTIFY STATUS */
+		&.success{
+			background:#00C853;
+			color:#fff;
+		}
+		&.primary{
+			background:$clr-primary;
+			color:#fff;
+		}
+		&.info{
+			background:$clr-highlight;
+			color:#fff;
+		}
+		&.warning{
+			background:#FFC107;
+			color:#fff;
+		}
+		&.danger{
+			background:#EF5350;
+			color:#fff;
+		}
+		
+
+	}
+}
